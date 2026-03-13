@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="images">
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animeflex|The Ani-Vault</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+            overflow-y: auto;
+
+        }
+
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        #genre-selector {
+            padding: 80px 20px;
+            text-align: center;
+            ;
+            background: url() center/cover fixed;
+            position: relative;
+        }
+
+        #genre-elector::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .content-wrap {
+            position: relative;
+            z-index: 1;
+        }
+
+        .genre-chips {
+
+
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+
+        }
+
+        .chip {
+            cursor: pointer;
+            background: #222;
+            padding: 12px 25px;
+            border-radius: 5px;
+            transition: 0.3s;
+            border: 1px solid#444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chip:hover {
+            background: #ff4500;
+            border-color: #fff;
+            transform: translateY(-3px);
+        }
+
+        #hero-gallery {
+            padding: 80px 20px;
+            background: #111;
+
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: #1a1a1a;
+            transition: 0.3s;
+
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px #ff4500;
+        }
+
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        #vote-battle {
+            padding: 80px 20px;
+            background: #000;
+            text-align: center;
+        }
+
+        .battle-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .contender {
+            flex: 1;
+            min-width: 280px;
+            max-width: 500px;
+        }
+
+        .image-stack {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+
+        }
+
+        .image-stack img {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #333;
+        }
+
+        .vote-btn {
+            padding: 15px 40px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .gojo-btn {
+            background: #00d4ff;
+            color: #000;
+        }
+
+        .jinwoo-btn {
+            background: #a020f0;
+            color: #fff;
+        }
+
+        #rankings {
+            padding: 80px 20px;
+            background: #fff;
+            color: #111;
+
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            margin: 15px auto;
+            border-radius: 8px;
+
+        }
+
+        .rank-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+
+        }
+
+        #watchlist {
+            padding: 80px 20px;
+            background: #111;
+            text-align: center;
+
+
+        }
+
+        .check-box {
+            max-width: 400px;
+            margin: 20px auto;
+            text-align: left;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ff4500;
+        }
+
+        .check-box label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        footer {
+            padding: 60px 20px;
+            background: linear-gradient(45deg, #ff4500, #ff007a);
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            padding: 20px;
+            display: flex;
+            gap: 30px;
+            text-align: center;
+        }
+        nav a {
+            color: #ff4500;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="animation.html">Anime</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section id="genre-selector">
+        <div class="content-wrap">
+            <h2 style="font-size: 3rem;color: #ff4500;">Aniflex Discovery</h2>
+            <p>
+                Define your anime journey. Whats your flavour today?
+            </p>
+
+            <div>
+                <label class="chip"><input type="checkbox">Action</label>
+                <label class="chip"><input type="checkbox">Psychological</label>
+                <label class="chip"><input type="checkbox">Supernatural</label>
+                <label class="chip"><input type="checkbox">Adventure</label>
+            </div>
+        </div>
+    </section>
+    <section id="hero-gallery">
+        <h2 style="text-align: center;margin-bottom: 40px;">Trending this Season</h2>
+        <div class="gallery-grid">
+
+            <div class="card">
+                <img src="images/ani7.jpg" alt="jujutsu kaisen">
+                <div>
+                    <h3 style="padding: 15px;">Jujutsu Kaisen</h3>
+                    <p>Cursed Energy and Epic Battles</p>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="images/vin.jpg" alt="vinland saga">
+                <div>
+                    <h3 style="padding: 15px;">Vinland Saga</h3>
+                    <p>Violence and Survival in Medieval Scandinavia</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/dem.jpg" alt="demon slayer">
+                <div>
+                    <h3 style="padding: 15px;">Demon Slayer</h3>
+                    <p>Breath-Taking Swordsmanship</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/aot.jpg" alt="attack on titan">
+                <div>
+                    <h3 style="padding: 15px;">Attack on Titan</h3>
+                    <p>The Struggle for humanity's survival and freedom</p>
+                </div>
+            </div>
+
+    </section>
+    <section id="vote-battle">
+        <h2 style="font-size: 2.5rem;">The Ultimate Face-Off</h2>
+        <p>Who reigns supreme in power and style?</p>
+        <div class="battle-container">
+            <div class="contender">
+                <h3>Gojo Satoru</h3>
+                <div class="image-stack">
+                    <img src="images/gojo1.png" alt="Gojo 1">
+                    <img src="images/gojo2.jpg" alt="Gojo 2">
+                    <img src="images/gojo3.jpg" alt="Gojo 3">
+                </div>
+                <button class="vote-btn gojo-btn">Vote for Gojo</button>
+
+                <div class="contender">
+                    <h3 style="color: #a020f0; margin-bottom: 15px;">Sung Jin Woo</h3>
+                    <div class="image-stack">
+                        <img src="images/jinwoo1.jpg" alt="Jinwoo 1">
+                        <img src="images/jinwoo2.jpg" alt="Jinwoo 2">
+                        <img src="images/jinwoo3.jpg" alt="Jinwoo 3">
+                    </div>
+                    <button class="vote-btn jinwoo-btn">Vote for Jin Woo</button>
+                </div>
+            </div>
+    </section>
+
+    <section id="rankings">
+        <h2 style="text-align: center; margin-right: 40px; margin-bottom: 30px;">Top Rated Anime</h2>
+        <div class="rank-item">
+            <img src="images/ble.jpg" alt="Bleach" class="rank-img">
+            <div>
+                <h3>Bleach</h3>
+                <p>Rating: 9.0/10</p>
+            </div>
+        </div>
+        <div class="rank-item">
+            <img src="images/nar.jpg" alt="Naruto" class="rank-img">
+            <div>
+                <h3>Naruto</h3>
+                <p>Rating: 8.8/10</p>
+            </div>
+        </div>
+        <div class="rank-item">
+            <img src="images/aot.jpg" alt="Attack on Titan" class="rank-img">
+            <div>
+                <h3>Attack on Titan</h3>
+                <p>Rating: 9.2/10</p>
+            </div>
+        </div>
+               <div class="rank-item">
+        <img src="images/one.jpg" alt="One Piece" class="rank-img">
+        <div>
+            <h3>One Piece</h3>
+            <p>Rating: 9.1/10</p>
+        </div>
+    </div> 
+    <hr style="margin: 40px auto;width: 80%;opacity: 0.2;">
+    <h3 style="text-align: center; margin-bottom: 20px;">The Masterlist</h3>
+    <div class="rank-item">
+        <img src="images/fa.jpg" alt="Fullmetal Alchemist: Brotherhood" class="rank-img">
+        <div>
+            <h3>Fullmetal Alchemist: Brotherhood</h3>
+            <p>Equivalent exchange and the pursuit of the Philosopher's Stone</p>
+        </div>
+    </div>
+
+    <div class="rank-item">
+        <img src="images/dn.jpg" alt="Death Note" class="rank-img">
+        <div>
+            <h3>Death Note</h3>
+            <p>A high-stakes battle of wits between a genius detective and a supernatural killer</p>
+        </div>
+    </div>
+    </section>
+
+    <section id="watchlist">
+        <h2 style="font-size: 2.5rem; color: #ff4500;">Create Your Watchlist</h2>
+        <p>Select your favorite anime to build a personalized watchlist.</p>
+        <div class="check-box">
+            <label><input type="checkbox">My Hero Academia</label>
+            <label><input type="checkbox">Fullmetal Alchemist: Brotherhood</label>
+            <label><input type="checkbox">Death Note</label>
+            <label><input type="checkbox">Hunter x Hunter</label>
+        </div>
+    </section>
+    <footer>
+        <h2>Join the Eliteflex Nexus</h2>
+        <p>Stay updated with the latest anime trends and releases.</p>
+        <div style="margin-top: 20px;">
+            <input   type="email" placeholder="Ninja email here" style="padding: 12px; border-radius: 5px; border: none; max-width: 250px;">     
+            <button style="padding: 12px; border: none; border-radius: 5px; background: #000; color: #fff; cursor: pointer;">Submit</button>
+
+        </div>
+    </footer>
+</body>
+
+</html>

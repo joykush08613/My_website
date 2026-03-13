@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WEBSITE</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #eae6df;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: #c9a24d;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Gold divider under titles */
+        .section-title-divider {
+            width: 80px;
+            height: 3px;
+            background-color: #c9a24d;
+            margin: 0 auto 30px auto;
+            border-radius: 2px;
+        }
+
+        /* Menu filter buttons */
+        .menu-filters .btn {
+            margin: 0 5px 10px 5px;
+            background-color: transparent;
+            color: #c9a24d;
+            border: 1px solid #c9a24d;
+            transition: all 0.3s ease;
+        }
+
+        .menu-filters .btn:hover,
+        .menu-filters .btn.active {
+            background-color: #c9a24d;
+            color: #0f0f0f;
+        }
+
+        /* Cards */
+        .card {
+            background-color: #1c1a19;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 162, 77, 0.25);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+            transition: all 0.35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(201, 162, 77, 0.35);
+        }
+
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .card-body {
+            text-align: center;
+            color: #eae6df;
+        }
+
+        /* Hidden class for filtering */
+        .menu-item {
+            display: none;
+        }
+
+        .menu-item.show {
+            display: block;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #c9a24d;
+        }
+
+        .nav-links a.active {
+            color: #c9a24d;
+            border-bottom: 2px solid #c9a24d;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section style="margin-top: 60px;">
+        <div class="nav-links text-center">
+            <a href="index.html" class="active">HOME</a>
+            <a href="animation.html" class="active">ANIMATION</a>
+            <a href="fashion.html" class="active">FASHION</a>
+            <a href="gallery.html" class="active">GALLERY</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </div>
+    </section>
+    <!-- Menu Filters -->
+    <div class="nav-links container text-center my-5">
+        <h2 class="section-title">Our Lists</h2>
+        <div class="section-title-divider"></div>
+    </div>
+
+    <!-- Menu Items -->
+    <div class="container">
+        <div class="row g-4 menu-items">
+
+
+            <section id="hero-gallery">
+                <h2 style="text-align: center;margin-bottom: 40px;">Trending this Season</h2>
+                <div class="gallery-grid">
+
+                    <div class="card">
+                        <img src="images/ani4.car.jpg" alt="jujutsu kaisen" width="500">
+                        <div>
+                            <h3 style="padding: 15px;">Jujutsu Kaisen</h3>
+                            <a href="animation.html">Animation</a>
+                            <p>Cursed Energy and Epic Battles</p>
+                        </div>
+                    </div><br><br>
+                    <div class="card">
+                        <img src="images/women watche.webp" alt="vinland saga" width="500" height="400">
+                        <div>
+                            <h3 style="padding: 15px;">Women Watches</h3>
+                            <a href="gallery.html">Watches</a>
+                            <p>Best Watches Found</p>
+                        </div>
+                    </div><br><br>
+                    <div class="card">
+                        <img src="images/winter caps.webp " alt="demon slayer" width="500">
+                        <div>
+                            <h3 style="padding: 15px;">Winter Caps</h3>
+                            <a href="gallery.html">Caps</a>
+                            <p>Breath-Taking Caps</p>
+                        </div>
+                    </div><br><br>
+                    <div class="card">
+                        <img src="images/sunset.webp" alt="attack on titan" width="500" height="400">
+                        <div>
+                            <h3 style="padding: 15px;">Cool Weather</h3>
+                            <a href="gallery.html">Weather</a>
+                            <p>The Beautiful Sunset</p>
+                        </div>
+                    </div><br><br>
+            </section>
+            <section id="hero-gallery">
+                <div class="gallery-grid">
+
+                    <div class="card">
+                        <img src="images/unique.webp" alt="jujutsu kaisen" width="500">
+                        <div>
+                            <h3 style="padding: 15px;">Unique Rings </h3>
+                            <a href="gallery.html">Rings</a>
+                            <p>Cursed Energy and Epic Rings</p>
+                        </div>
+                    </div><br><br>
+                    <div class="card">
+                        <img src="images/cross.webp" alt="vinland saga" width="500">
+                        <div>
+                            <h3 style="padding: 15px;">Crossbody Bags</h3>
+                            <a href="gallery.html">Bags</a>
+                            <p>Violence and Survival in Medieval Scandinavia</p>
+                        </div>
+                    </div><br><br>
+                    <div class="card">
+                        <img src="images/arrrm.webp" alt="demon slayer" width="500" height="400">
+                        <div>
+                            <h3 style="padding: 15px;">Arm Tattoos</h3>
+                            <a href="gallery.html">Tattoos</a>
+                            <p>Breath-Taking Swordsmanship</p>
+                        </div>
+                    </div><br><br>
+                    <div class="card">
+                        <img src="images/teen.webp" alt="attack on titan" width="500" height="400">
+                        <div>
+                            <h3 style="padding: 15px;">Trending Shoes</h3>
+                            <a href="gallery.html">Trending Shoes</a>
+                            <p>The Struggle for humanity's survival and freedom</p>
+                        </div>
+                    </div><br><br>
+                    <section id="hero-gallery">
+                        <div class="gallery-grid">
+
+                            <div class="card">
+                                <img src="images/fas10.jpg" alt="jujutsu kaisen" width="500" height="400">
+                                <div>
+                                    <h3 style="padding: 15px;">New Trend </h3>
+                                    <a href="fashion.html">New Standard</a>
+                                    <p>Cursed Energy and Epic Battles</p>
+                                </div>
+
+                            </div><br><br>
+                            <div class="card">
+                                <img src="images/fas37.png" alt="vinland saga" width="500" height="400">
+                                <div>
+                                    <h3 style="padding: 15px;">The New Outfit</h3>
+                                    <a href="fashion.html">New Outfit</a>
+                                    <p>Violence and Survival in Medieval Scandinavia</p>
+                                </div>
+                            </div><br><br>
+                            <div class="card">
+                                <img src="images/wat1.jpg" alt="demon slayer" width="500">
+                                <div>
+                                    <h3 style="padding: 15px;">Casio Watches</h3>
+                                    <a href="fashion.html">New Watches</a>
+                                    <p>Breath-Taking Watches</p>
+                                </div>
+                            </div><br><br>
+                            <div class="card">
+                                <img src="images/orgfas4.jpg" alt="attack on titan" width="500" height="400">
+                                <div>
+                                    <h3 style="padding: 15px;">Trendy Clothing</h3>
+                                    <a href="fashion.html">Keeping The Earth Clean</a>
+                                    <p>The Struggle for humanity's survival and freedom</p>
+                                </div>
+                            </div>
+                    </section><br><br>
+
+                    <section id="hero-gallery">
+                        <div class="gallery-grid">
+
+                            <div class="card">
+                                <img src="images/fas23.jpg" alt="jujutsu kaisen" width="500" height="400">
+                                <div>
+                                    <h3 style="padding: 15px;">Trendy Outfit</h3>
+                                    <a href="fashion.html">Outfit</a>
+                                    <p>Cursed Energy and Epic Battles</p>
+                                </div>
+
+                            </div><br><br>
+                            <div class="card">
+                                <img src="images/fas46.jpg" alt="vinland saga" width="500" height="450">
+                                <div>
+                                    <h3 style="padding: 15px;">Calvin Klein Jeans</h3>
+                                    <a href="fashion.html">Jeans</a>
+                                    <p>Violence and Survival in Medieval Scandinavia</p>
+                                </div>
+                            </div><br><br>
+                            <div class="card">
+                                <img src="images/headset.jpg" alt="demon slayer" width="500" height="400">
+                                <div>
+                                    <h3 style="padding: 15px;">Headphones</h3>
+                                    <a href="gallery.html">Headphones</a>
+                                    <p>Breath-Taking Swordsmanship</p>
+                                </div>
+                            </div><br><br>
+                            <div class="card">
+                                <img src="images/mat5.jpg" alt="attack on titan" width="500" height="400">
+                                <div>
+                                    <h3 style="padding: 15px;">Nganya</h3>
+                                    <a href="gallery.html">Trendy Cars</a>
+                                    <p>The Struggle for humanity's survival and freedom</p>
+                                </div>
+                            </div>
+
+                            <footer class="py-4 text-center border-top">
+                                <p class="text-muted small">Developed by Joy Kuria.&copy; 2026 EliteFlex.All Rights
+                                    Reserved.</p>
+                            </footer>
+</body>
+
+</html>
+
+</html>
